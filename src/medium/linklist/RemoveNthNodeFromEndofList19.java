@@ -10,6 +10,7 @@ public class RemoveNthNodeFromEndofList19 {
         ListNode fast = dummyHead;
         ListNode slow = dummyHead;
         //fast ---_--
+        //fast要走n+1步，这样slow才能指向要删除节点的前一个节点
         for (int i = 0; i <= n; i++) {
             fast = fast.next;
         }
