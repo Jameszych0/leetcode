@@ -1,4 +1,7 @@
-package medium.linklist;
+package easy.linklist;
+
+import medium.linklist.ListNode;
+
 /*
  * 题目大意
  * A,B两个链表从某个节点开始，后面都相同了
