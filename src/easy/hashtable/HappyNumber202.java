@@ -3,7 +3,7 @@ package easy.hashtable;
 import java.util.HashSet;
 
 public class HappyNumber202 {
-    // 要仔细读题，本题说如果哦不是快乐数就进入无限循环，也就是说平方后的结果会重复出现，当重复出现时，就代表这不是快乐数了
+    // 要仔细读题，本题说如果不是快乐数就进入无限循环，也就是说平方后的结果会重复出现，当重复出现时，就代表这不是快乐数了
     public boolean isHappy(int n) {
         // 当题目要快速判断数值的有无是 应用哈希表
         HashSet<Integer> hashset = new HashSet<>();
