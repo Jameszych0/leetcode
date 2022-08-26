@@ -14,8 +14,7 @@ public class IntersectionofTwoArrays349 {
         }
         for (int i : nums2) {
             if (hashSet.contains(i))
-                ;
-            res.add(i);
+                res.add(i);
         }
         // set转数组，第二中方法没搞懂
         int[] temp = new int[res.size()];
