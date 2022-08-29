@@ -1,6 +1,6 @@
 package easy.string;
 
-public class ImplementstrStr28 {
+public class KMPImplementstrStr28 {
 
     public int strStr(String haystack, String needle) {
         // 题目条件，当模式串为空时，返回0
