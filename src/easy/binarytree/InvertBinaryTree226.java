@@ -2,6 +2,7 @@ package easy.binarytree;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class InvertBinaryTree226 {
     /*
@@ -45,9 +46,18 @@ public class InvertBinaryTree226 {
     public TreeNode invertTree03(TreeNode root) {
         if (root == null)
             return null;
-        
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            swapChildren(node);
+            if (node.right != null)
+                stack.push(node.right);
+            if (node.left != null)
+                stack.push(node.left);
+        }
 
-        return null;
+        return root;
     }
 
     public void swapChildren(TreeNode root) {
