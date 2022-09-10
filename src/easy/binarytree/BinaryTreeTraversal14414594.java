@@ -2,7 +2,9 @@ package easy.binarytree;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.Stack;
 
 public class BinaryTreeTraversal14414594 {
@@ -122,6 +124,36 @@ public class BinaryTreeTraversal14414594 {
             Collections.reverse(res);
         }
 
+        return res;
+    }
+
+    /*
+     * 层序遍历
+     */
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> res = new ArrayList<>();
+        if (root == null)
+            return res;
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            List<Integer> temp = new ArrayList<>();
+            // len代表这一层有多少个节点
+            int len = queue.size();
+
+            while (len > 0) {
+                TreeNode node = queue.poll();
+                // 把一层的节点放到临时表里
+                temp.add(node.val);
+                // 把这一层的子节点都放入到队列里
+                if (node.left != null)
+                    queue.offer(node.left);
+                if (node.right != null)
+                    queue.offer(node.right);
+                len--;
+            }
+            res.add(temp);
+        }
         return res;
     }
 }
