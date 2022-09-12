@@ -32,9 +32,13 @@ public class MaximumDepthofBinaryTree104 {
      * 递归法
      */
     public int maxDepth02(TreeNode root) {
-
-
-        return 0;
+        if (root == null)
+            return 0;
+        // 后序遍历求高度
+        int leftheight = maxDepth02(root.left);
+        int rightheight = maxDepth02(root.right);
+        int depth = Math.max(leftheight, rightheight) + 1;
+        return depth;
     }
 
 }
