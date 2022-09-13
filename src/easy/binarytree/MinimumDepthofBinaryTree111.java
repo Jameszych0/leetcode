@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class MinimumDepthofBinaryTree111 {
-    public int minDepth(TreeNode root) {
+    public int minDepth01(TreeNode root) {
         int cnt = 1;
         if (root == null)
             return 0;
@@ -26,5 +26,18 @@ public class MinimumDepthofBinaryTree111 {
             cnt++;
         }
         return cnt;
+    }
+
+    public int minDepth02(TreeNode root) {
+        if (root == null)
+            return 0;
+        int leftheight = minDepth02(root.left);
+        int rightheight = minDepth02(root.right);
+
+        if (root.left == null && root.right != null)
+            return rightheight + 1;
+        if (root.right == null && root.left != null)
+            return leftheight + 1;
+        return Math.min(leftheight, rightheight) + 1;
     }
 }
