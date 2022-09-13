@@ -1,4 +1,4 @@
-package easy.binarytree;
+package medium.binarytree;
 
 public class TreeNode {
     int val;
