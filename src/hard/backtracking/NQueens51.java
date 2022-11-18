@@ -27,7 +27,7 @@ public class NQueens51 {
         }
 
         for (int col = 0; col < n; col++) {
-            if (isValid(row, col, chessboard)) {
+            if (isValid(row, col, n, chessboard)) {
                 chessboard[row][col] = 'Q';
                 backtracking(row + 1, n, chessboard);
                 chessboard[row][col] = '.';
@@ -35,19 +35,19 @@ public class NQueens51 {
         }
     }
 
-    boolean isValid(int row, int col, char[][] chessboard) {
+    boolean isValid(int row, int col, int n, char[][] chessboard) {
         for (int i = 0; i < row; i++)
             if (chessboard[i][col] == 'Q')
                 return false;
 
-        for (int i = row - 1, j = col - 1; i > 0 && j > 0; i--, j--)
-            if (chessboard[i][j] == 'q')
-                return false;
-
-        for (int i = row - 1, j = col + 1; i > 0 && j < n; i--, j++)
+        for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--)
             if (chessboard[i][j] == 'Q')
                 return false;
 
-            return true;
+        for (int i = row - 1, j = col + 1; i >= 0 && j < n; i--, j++)
+            if (chessboard[i][j] == 'Q')
+                return false;
+
+        return true;
     }
 }
