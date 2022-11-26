@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch bag01",
+            "request": "launch",
+            "mainClass": "medium.dp.bag01",
+            "projectName": "leetcode_2970be00"
+        },
+        {
+            "type": "java",
             "name": "Launch App",
             "request": "launch",
             "mainClass": "App",
