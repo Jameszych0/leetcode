@@ -1,7 +1,26 @@
 package easy.dp;
 
 public class ClimbingStairs70 {
-    public int climbStairs(int n) {
+    public static void main(String[] args) {
+        System.out.println(climbStairs02(3, 2));
+    }
+
+    public static int climbStairs02(int n, int path) {
+        int[] weight = new int[path];
+        for (int i = 0; i < path; i++)
+            weight[i] = i + 1;
+        int[] dp = new int[n + 1];
+        dp[0] = 1;
+        for (int i = 0; i <= n; i++)
+            for (int j = 0; j < path; j++) {
+                if (i < weight[j])
+                    continue;
+                dp[i] += dp[i - weight[j]];
+            }
+            return dp[n];
+    }
+
+    public int climbStairs01(int n) {
         // dp数组含义：爬到第i层楼梯，有dp[i]种方法
         int[] dp = new int[n + 1];
         if (n <= 2)
@@ -11,7 +30,7 @@ public class ClimbingStairs70 {
         dp[2] = 2;
         // 确定遍历顺序
         for (int i = 3; i <= n; i++) {
-            // 确定递推公式 
+            // 确定递推公式
             dp[i] = dp[i - 1] + dp[i - 2];
         }
         return dp[n];
