@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MultiPack",
+            "request": "launch",
+            "mainClass": "medium.dp.MultiPack",
+            "projectName": "leetcode_2970be00"
+        },
+        {
+            "type": "java",
             "name": "Launch ClimbingStairs70",
             "request": "launch",
             "mainClass": "easy.dp.ClimbingStairs70",
