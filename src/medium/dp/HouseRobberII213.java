@@ -5,6 +5,7 @@ public class HouseRobberII213 {
         int len = nums.length;
         if (len == 1)
             return nums[0];
+        // 这是一个循环数组，考虑两种情况，考虑包含首元素，不包含尾元素。考虑不含首元素，包含尾元素
         return Math.max(robAction(nums, 0, len - 1), robAction(nums, 1, len));
     }
 
