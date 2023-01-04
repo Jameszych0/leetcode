@@ -1,6 +1,7 @@
 package medium.dp;
 
 public class LongestCommonSubsequence1143 {
+    // 不连续，所以要比较dp[i][j - 1], dp[i - 1][j]
     public int longestCommonSubsequence(String text1, String text2) {
         int len1 = text1.length(), len2 = text2.length();
         // 长度为[0, i - 1]的字符串text1与长度为[0, j - 1]的字符串text2的最长公共子序列为dp[i][j]
