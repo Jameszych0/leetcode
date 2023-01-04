@@ -1,6 +1,7 @@
 package medium.dp;
 
 public class MaximumLengthofRepeatedSubarray718 {
+    // 连续，所以不需要比较dp[i][j - 1],dp[i - 1][j]
     public int findLength(int[] nums1, int[] nums2) {
         int n1 = nums1.length, n2 = nums2.length;
         // 以下标i - 1为结尾的A，和以下标j - 1为结尾的B，最长重复子数组长度为dp[i][j]
