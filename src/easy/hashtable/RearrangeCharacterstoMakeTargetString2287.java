@@ -21,6 +21,7 @@ public class RearrangeCharacterstoMakeTargetString2287 {
             char c = entry.getKey();
             int count = entry.getValue();
             int totalCount = sCount.containsKey(c) ? sCount.get(c) : 0;
+            // 看看s里有多少个c，最后取最少的
             ans = Math.min(ans, totalCount / count);
             if (ans == 0)
                 return 0;
