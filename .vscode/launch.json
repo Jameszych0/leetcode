@@ -5,34 +5,6 @@
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "Main",
-            "projectName": "leetcode-main_78032966"
-        },
-        {
-            "type": "java",
-            "name": "Launch MultiPack",
-            "request": "launch",
-            "mainClass": "medium.dp.MultiPack",
-            "projectName": "leetcode_2970be00"
-        },
-        {
-            "type": "java",
-            "name": "Launch ClimbingStairs70",
-            "request": "launch",
-            "mainClass": "easy.dp.ClimbingStairs70",
-            "projectName": "leetcode_2970be00"
-        },
-        {
-            "type": "java",
-            "name": "Launch CompletePack",
-            "request": "launch",
-            "mainClass": "medium.dp.CompletePack",
-            "projectName": "leetcode_2970be00"
-        },
-        {
-            "type": "java",
-            "name": "Launch bag01",
-            "request": "launch",
-            "mainClass": "medium.dp.bag01",
             "projectName": "leetcode_2970be00"
         },
         {
@@ -40,7 +12,7 @@
             "name": "Launch App",
             "request": "launch",
             "mainClass": "App",
-            "projectName": "leetcode_2970be00"
+            "projectName": "eqwe_37181225"
         },
         {
             "type": "java",
