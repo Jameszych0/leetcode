@@ -19,5 +19,4 @@ public class BackspaceStringCompare844 {
         }
         return ssb.toString().equals(tsb.toString());
     }
-
 }
