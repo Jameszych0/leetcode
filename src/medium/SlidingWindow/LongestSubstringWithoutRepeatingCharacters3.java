@@ -1,4 +1,4 @@
-package medium.hashtable;
+package medium.SlidingWindow;
 
 import java.util.HashMap;
 
